@@ -1,114 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio | Carolina Morais</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
+<html lang="pt-BR" class="dark">
+<head>
+  <link rel="icon" href="logo.png.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Carolina Morais</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
       }
-    </style>
-  </head>
-  <body class="bg-gray-100 text-gray-800">
+      to {
+        opacity: 1;
+      }
+    }
 
-    <!-- HEADER -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-blue-600">Carolina</h1>
-        <nav class="space-x-4 text-sm font-medium">
-          <a href="#inicio" class="hover:text-blue-500">Início</a>
-          <a href="#sobre" class="hover:text-blue-500">Sobre</a>
-          <a href="#projetos" class="hover:text-blue-500">Projetos</a>
-          <a href="#contato" class="hover:text-blue-500">Contato</a>
-        </nav>
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    .button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: darkblue;
+    }
+
+  </style>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+</head>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+
+ 
+
+  </body>
+
+  <!-- HEADER -->
+  <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">Carolina</h1>
+      <nav class="space-x-4 text-sm font-medium">
+        <a href="#inicio" class="hover:text-blue-500 dark:hover:text-blue-300">Início</a>
+        <a href="#sobre" class="hover:text-blue-500 dark:hover:text-blue-300">Sobre</a>
+        <a href="#projetos" class="hover:text-blue-500 dark:hover:text-blue-300">Projetos</a>
+        <a href="#contato" class="hover:text-blue-500 dark:hover:text-blue-300">Contato</a>
+      </nav>
+      <!-- Botão de tema -->
+      <button onclick="toggleTheme()" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+        🌗
+      </button>
+    </div>
+  </header>
+
+  <!-- INÍCIO -->
+  <section id="inicio" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center px-6 dark:from-indigo-700 dark:to-blue-800">
+    <div>
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Olá! Eu sou Carolina Morais</h2>
+      <p class="text-xl mb-6">Desenvolvedora Web | Criadora de soluções criativas</p>
+      <a href="#projetos" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">Ver Projetos</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-screen-md mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">Sobre Mim</h3>
+      <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+        🚀 Estudante de Engenharia de Software e apaixonada por tecnologia e inovação.<br><br>
+        💻 Atualmente trabalho como Auxiliar de T.I e estou sempre em busca de novos desafios na área de desenvolvimento.<br><br>
+        🌱 Explorando tecnologias como JavaScript, HTML/CSS.<br><br>
+        💡 Criadora do projeto <strong>JmsSystem</strong>.<br><br>
+        📚 Estudante dedicada e entusiasta do aprendizado contínuo.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Projetos Recentes</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Projeto 1 -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
+          <h4 class="text-xl font-semibold mb-2">Explorando o Mundo do HTML</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Guia para iniciantes em HTML criarem um site simples e eficiente.</p>
+          <a href="https://github.com/Carolina-wp/Modelo-para-Iniciantes-em-HTML-Primeiros-Passos-para-Criar-um-Site-Simples-e-R-pido" target="_blank" class="text-blue-500 hover:underline">Ver no GitHub →</a>
+        </div>
+        <!-- Projeto 2 -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
+          <h4 class="text-xl font-semibold mb-2">Projeto 2</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Descrição do seu segundo projeto do GitHub aqui.</p>
+          <a href="https://github.com/Carolina-wp/projeto2" target="_blank" class="text-blue-500 hover:underline">Ver no GitHub →</a>
+        </div>
+        <!-- Projeto 3 -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6">
+          <h4 class="text-xl font-semibold mb-2">Projeto 3</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Descrição do seu terceiro projeto do GitHub aqui.</p>
+          <a href="https://github.com/Carolina-wp/projeto3" target="_blank" class="text-blue-500 hover:underline">Ver no GitHub →</a>
+        </div>
       </div>
-    </header>
-
-    <!-- INÍCIO -->
-    <section id="inicio" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center px-6">
-      <div>
-        <h2 class="text-4xl md:text-6xl font-bold mb-4">Olá! Eu sou Carolina Morais</h2>
-        <p class="text-xl mb-6">Desenvolvedor(a) Web | Criador(a) de soluções criativas</p>
-        <a href="#projetos" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">Ver Projetos</a>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="py-20 bg-white">
-      <div class="container mx-auto px-6 max-w-3xl text-center">
-        <h3 class="text-3xl font-bold mb-6">Sobre Mim</h3>
-        <p class="text-gray-700 text-lg">
-            🚀 Estudante de Engenharia de Software e apaixonada por tecnologia e inovação.
-
-            📊 Atualmente trabalho como Auxiliar de T.I, mas estou sempre em busca de novos desafios na área de desenvolvimento.
-            
-            🌱 Explorando tecnologias como JavaScript, HTML/CSS.
-            
-            💡 JmsSystem.
-            
-            📚 Estudante dedicada e entusiasta do aprendizado contínuo.
-        </p>
-      </div>
-    </section>
-
-
-<!-- PROJETOS -->
-<section id="projetos" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-12">Projetos Recentes</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- GitHub Projeto 1 -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h4 class="text-xl font-semibold mb-2">Explorando o Mundo do HTML</h4>
-        <p class="text-gray-600 mb-4">Se você é iniciante em HTML e está querendo dar seus primeiros passos para criar um site simples e eficiente, você chegou ao lugar certo.</p>
-        <a href="https://github.com/Carolina-wp/Modelo-para-Iniciantes-em-HTML-Primeiros-Passos-para-Criar-um-Site-Simples-e-R-pido" target="_blank" class="text-blue-500 hover:underline">Ver no GitHub →</a>
-      </div>
-      <!-- GitHub Projeto 2 -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h4 class="text-xl font-semibold mb-2">Projeto 2</h4>
-        <p class="text-gray-600 mb-4">Descrição do seu segundo projeto do GitHub aqui.</p>
-        <a href="https://github.com/Carolina-wp/projeto2" target="_blank" class="text-blue-500 hover:underline">Ver no GitHub →</a>
-      </div>
-      <!-- GitHub Projeto 3 -->
-      <div class="bg-white rounded-lg shadow-md p-6">
-        <h4 class="text-xl font-semibold mb-2">Projeto 3</h4>
-        <p class="text-gray-600 mb-4">Descrição do seu terceiro projeto do GitHub aqui.</p>
-        <a href="https://github.com/Carolina-wp/projeto3" target="_blank" class="text-blue-500 hover:underline">Ver no GitHub →</a>
+      <div class="mt-10 text-center">
+        <a href="https://github.com/Carolina-wp" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Ver mais no GitHub</a>
       </div>
     </div>
-    <div class="mt-10 text-center">
-      <a href="https://github.com/Carolina-wp" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Ver mais no GitHub</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-800 text-white text-center py-6">
-      <p>© 2025 Carolina. Todos os direitos reservados.</p>
-    </footer>
-
-    <!-- OUTRAS SEÇÕES -->
-<!-- Pode ser a seção de Sobre ou Projetos, por exemplo -->
-
-<!-- CONTATO -->
-<section id="contato" class="py-20 bg-white">
-    <div class="container mx-auto px-6 max-w-xl text-center">
+  <!-- CONTATO -->
+  <section id="contato" class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-xl mx-auto px-6 text-center">
       <h3 class="text-3xl font-bold mb-6">Entre em Contato</h3>
-      <p class="text-gray-700 mb-6">Você pode me chamar pelo e-mail ou clicar nos botões abaixo para acessar minhas redes sociais!</p>
+      <p class="text-gray-700 dark:text-gray-300 mb-6">Você pode me chamar pelo e-mail ou acessar minhas redes sociais abaixo:</p>
       <a href="mailto:carolinamorais063@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition mb-4 inline-block">Enviar E-mail</a>
       <br />
       <a href="https://www.linkedin.com/in/carolina-morais-7913172b3/" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition inline-block">Ver LinkedIn</a>
     </div>
   </section>
-  
-  <!-- RODAPÉ (se houver) -->
-  <!-- Essa seção pode ter links para redes sociais, informações adicionais, etc. -->
-  
 
-  </body>
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>© 2025 Carolina. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script para alternar tema -->
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+
+</body>
 </html>
